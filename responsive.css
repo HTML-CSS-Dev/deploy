@@ -1,0 +1,131 @@
+/* Breakpoints:
+
+320px - 640px - mobile - sm 
+641px - 767px - tablet - md 
+768px - 1023px - katta tablet va PC - lg
+1024px - 1179px - katta tablet va PC - xl
+1280px - 1535px - PC - 2xl
+
+
+
+Media query (CSS qoidalar)
+max-width, min-width, max-height, min-height, orientation, print...
+
+1. first-desktop (max-width, breakpoints decreasing)
+2. first-mobile (min-width, breakpoints increasing) */
+
+
+/* first-desktop */
+
+@media (max-width:1117px) {
+    body {
+        padding:20px
+    }
+
+    p {
+        font-size: 1vw;
+    }
+
+    h1 {
+        font-size:2vw;
+        line-height: 21.5px;
+    }
+
+    .same-img {
+        height:auto;
+        width:40%;
+    }
+
+    .second  > img {
+        height:auto;
+        width:80%;
+    }
+
+    .first > img {
+        height:auto;
+        width:40%;
+    }
+}
+
+
+@media (max-width:840px) {
+    .second {
+        grid-row:2/3;
+        grid-column:1/3;
+        padding-bottom:24px;
+    }
+
+    h1 {
+    font-size:24px;
+    margin: 8px 0 4px;
+    line-height: 31.5px;
+    }
+
+    p {
+        font-size:14px
+        
+    }
+
+    .second > img {
+    height: auto;
+    width:25%
+}
+
+
+.first > img {
+    height:auto;
+    width:35%
+}
+    .third {
+        grid-row:3/4;
+    }
+
+    .fourth {
+        grid-row:3/4;
+    }
+
+} 
+
+
+@media (max-width:767px) {
+    .third > p {
+    font-size:1.4vw;
+    }
+
+    .fourth > p {
+    font-size: 1.4vw;
+    }
+}
+
+@media (max-width:640px) {
+    
+    .third {
+        grid-column: 1/3;
+    }
+
+    .fourth {
+        grid-row:4/5;
+        grid-column:1/3;
+    }
+
+    .same-img {
+        height: auto;
+        width:40%
+    }
+
+    h1 {
+        font-size: 4vw;
+        line-height: 21.5px;
+    }
+    p {
+        font-size: 2vw;
+    }
+
+    .third > p {
+    font-size:2vw;
+    }
+
+    .fourth > p {
+    font-size: 2vw;
+    }
+}
